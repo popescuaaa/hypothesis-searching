@@ -14,9 +14,10 @@ scheduler:
   patience: 10
 
 net:
-  _target_: src.models.components.simple_dense_net.SimpleDenseNet
-  input_size: 784
-  lin1_size: 64
-  lin2_size: 128
-  lin3_size: 64
-  output_size: 10
+  _target_: src.models.components.simple_conv_net.SimpleConvNet
+  input_channels: 1
+  conv1_channels: 32
+  conv2_channels: 64
+  conv3_channels: 128
+  conv4_channels: 256
+  num_classes: 100
